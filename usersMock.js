@@ -1,4 +1,4 @@
-export const users = [
+const users = [
   {
     name: 'Mario',
     password: "mario123",
@@ -25,3 +25,5 @@ export const users = [
     token:'QpwL5tke4Pnpja7X4'
   },
 ];
+
+module.exports = users

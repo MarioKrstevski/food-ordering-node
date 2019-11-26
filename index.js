@@ -1,14 +1,13 @@
-import express from "express";
-import bodyParser from "body-parser";
-import mongoose from "mongoose";
-import cors from "cors";
+var express = require('express')
+var cors = require('cors')
+var mongoose = require('mongoose')
+var bodyParser = require('body-parser')
 
 // import Comment from "./models/comment";
 // import Order from "./models/order";
 // import DailyMenu from "./models/dailyMenu";
-import config from "./config.json";
-
-import { users } from "./usersMock";
+var config = require('./config.json')
+var {users} = require('./usersMock')
 
 // and create our instances
 const app = express();
@@ -30,7 +29,7 @@ const DB_URI = config.dbUri;
 // db config -- We are using mLab set your URI from mLab in secrets.js
 
 // mongoose.connect(getSecret('dbUri'));
-
+mongoose
 mongoose.connect(DB_URI, { useNewUrlParser: true });
 
 var db = mongoose.connection;
